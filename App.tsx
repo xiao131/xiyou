@@ -98,7 +98,7 @@ const App: React.FC = () => {
     return (
       <div className="h-screen w-screen flex flex-col items-center justify-center bg-stone-950 text-stone-100 relative overflow-hidden">
         {/* Immersive Background: Dark Mountains / Fog */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-40 animate-pulse-slow"></div>
+        <div className="absolute inset-0 bg-stone-900 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop')] bg-cover bg-center opacity-40 animate-pulse-slow"></div>
         {/* Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/50 to-stone-950/80"></div>
         
@@ -112,10 +112,10 @@ const App: React.FC = () => {
           {/* Wukong Selection Card */}
           <button 
             onClick={() => startGame(HeroClass.WUKONG)}
-            className="group relative h-96 bg-stone-900 border-2 border-stone-700 hover:border-amber-600 transition-all p-0 flex flex-col items-center overflow-hidden shadow-2xl hover:scale-105 duration-500"
+            className="group relative h-96 bg-stone-800 border-2 border-stone-700 hover:border-amber-600 transition-all p-0 flex flex-col items-center overflow-hidden shadow-2xl hover:scale-105 duration-500"
           >
             {/* Image: Golden Monkey Statue / Intense */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1636570640822-482c356f96b6?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"></div>
+            <div className="absolute inset-0 bg-stone-800 bg-[url('https://images.unsplash.com/photo-1636570640822-482c356f96b6?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
             
             <div className="relative z-10 mt-auto mb-8 text-center px-6 w-full">
@@ -131,10 +131,10 @@ const App: React.FC = () => {
           {/* Tang Monk Selection Card */}
           <button 
              onClick={() => startGame(HeroClass.TANG)}
-             className="group relative h-96 bg-stone-900 border-2 border-stone-700 hover:border-blue-500 transition-all p-0 flex flex-col items-center overflow-hidden shadow-2xl hover:scale-105 duration-500"
+             className="group relative h-96 bg-stone-800 border-2 border-stone-700 hover:border-blue-500 transition-all p-0 flex flex-col items-center overflow-hidden shadow-2xl hover:scale-105 duration-500"
           >
              {/* Image: Buddha Statue / Temple */}
-             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581451368968-382a98f1f435?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"></div>
+             <div className="absolute inset-0 bg-stone-800 bg-[url('https://images.unsplash.com/photo-1581451368968-382a98f1f435?q=80&w=800&auto=format&fit=crop')] bg-cover bg-center opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-110"></div>
              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
              
              <div className="relative z-10 mt-auto mb-8 text-center px-6 w-full">
@@ -160,7 +160,7 @@ const App: React.FC = () => {
       return (
           <div className="h-screen w-screen flex flex-col items-center justify-center bg-black text-red-600 relative overflow-hidden">
               {/* Game Over BG: Desolate Wasteland */}
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605806616949-1e87b487bc2a?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale contrast-125"></div>
+              <div className="absolute inset-0 bg-stone-950 bg-[url('https://images.unsplash.com/photo-1605806616949-1e87b487bc2a?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center opacity-40 grayscale contrast-125"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/80"></div>
 
               <h1 className="text-8xl h-font mb-4 z-10 animate-pulse font-bold tracking-widest text-shadow drop-shadow-[0_0_25px_rgba(220,38,38,0.8)]">败北</h1>
@@ -179,7 +179,7 @@ const App: React.FC = () => {
       return (
           <div className="h-screen w-screen flex flex-col items-center justify-center bg-stone-950 text-stone-100 relative overflow-hidden">
               {/* Reward BG: Ancient Temple Treasure */}
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1599739485077-4b77d6110903?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+              <div className="absolute inset-0 bg-stone-950 bg-[url('https://images.unsplash.com/photo-1599739485077-4b77d6110903?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
               <div className="absolute inset-0 bg-gradient-to-b from-stone-950 via-stone-900/80 to-stone-950"></div>
               
               <h2 className="text-5xl h-font text-amber-500 mb-12 z-10 tracking-[0.2em] font-bold drop-shadow-md">战斗胜利</h2>
