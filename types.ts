@@ -1,3 +1,4 @@
+
 export enum CardType {
   ATTACK = 'ATTACK',
   SKILL = 'SKILL',
@@ -24,7 +25,7 @@ export interface CardEffect {
   heal?: number;
   status?: string; // e.g., "STUN", "VULNERABLE"
   statusValue?: number;
-  special?: string; // e.g., "RECRUIT_BONUS"
+  special?: string; // e.g., "CLONE"
 }
 
 export interface Card {
@@ -37,7 +38,15 @@ export interface Card {
   rarity: 'COMMON' | 'RARE' | 'LEGENDARY' | 'BOSS';
   effects: CardEffect;
   exhaust?: boolean;
-  image?: string; // Fallback or class name for visual
+  image?: string; 
+}
+
+export interface Relic {
+  id: string;
+  name: string;
+  description: string;
+  image: string; // Emoji or URL
+  effect?: string;
 }
 
 export interface Entity {
@@ -46,7 +55,7 @@ export interface Entity {
   maxHp: number;
   hp: number;
   block: number;
-  maxEnergy: number; // Enemies usually don't use energy, but heroes do
+  maxEnergy: number; 
   energy: number;
   image: string;
   statuses: Record<string, number>;
@@ -57,12 +66,13 @@ export interface Enemy extends Entity {
   intentValue: number;
   isElite?: boolean;
   isBoss?: boolean;
-  recruitCardId?: string; // If recruited, which card does it become?
+  recruitCardId?: string; 
 }
 
 export interface Hero extends Entity {
   class: HeroClass;
   gold: number;
+  relics: Relic[];
 }
 
 export type GameState = 'MENU' | 'MAP' | 'COMBAT' | 'REWARD' | 'GAME_OVER' | 'VICTORY';
@@ -73,5 +83,5 @@ export interface MapNode {
   completed: boolean;
   x: number;
   y: number;
-  next: number[]; // Adjacency list
+  next: number[]; 
 }
